@@ -1,11 +1,19 @@
 [
     {
+        "merged": "com.jnu.student.app-merged_res-28:/drawable_second.png.flat",
+        "source": "com.jnu.student.app-main-30:/drawable/second.png"
+    },
+    {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_book_no_name.jpg.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\book_no_name.jpg"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\layout_fragment_tencent_map.xml.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\fragment_tencent_map.xml"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -18,6 +26,14 @@
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\layout_fragment_clock_view.xml.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\fragment_clock_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_second.png.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\second.png"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\xml_backup_rules.xml.flat",
@@ -36,8 +52,8 @@
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.jnu.student.app-merged_res-28:/layout_fragment_tencent_map.xml.flat",
-        "source": "com.jnu.student.app-main-30:/layout/fragment_tencent_map.xml"
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_clock.png.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\clock.png"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -76,6 +92,10 @@
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_second.jpg.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\second.jpg"
+    },
+    {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
@@ -88,6 +108,14 @@
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\book_item_row.xml"
     },
     {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_hour.png.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\hour.png"
+    },
+    {
+        "merged": "com.jnu.student.app-merged_res-28:/drawable_hour.png.flat",
+        "source": "com.jnu.student.app-main-30:/drawable/hour.png"
+    },
+    {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\ic_launcher_background.xml"
     },
@@ -96,8 +124,16 @@
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\fragment_baidu_map.xml"
     },
     {
+        "merged": "com.jnu.student.app-merged_res-28:/drawable_minute.png.flat",
+        "source": "com.jnu.student.app-main-30:/drawable/minute.png"
+    },
+    {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\layout_activity_book_details.xml.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\activity_book_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_minute.png.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\minute.png"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_book_1.jpg.flat",

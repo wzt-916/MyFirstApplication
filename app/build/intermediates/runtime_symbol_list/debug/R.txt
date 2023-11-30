@@ -2712,11 +2712,13 @@ int drawable btn_radio_off_mtrl 0x7f070081
 int drawable btn_radio_off_to_on_mtrl_animation 0x7f070082
 int drawable btn_radio_on_mtrl 0x7f070083
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f070084
+int drawable clock 0x7f0700e3
 int drawable design_fab_background 0x7f070085
 int drawable design_ic_visibility 0x7f070086
 int drawable design_ic_visibility_off 0x7f070087
 int drawable design_password_eye 0x7f070088
 int drawable design_snackbar_background 0x7f070089
+int drawable hour 0x7f0700e4
 int drawable ic_arrow_back_black_24 0x7f07008a
 int drawable ic_clear_black_24 0x7f07008b
 int drawable ic_clock_black_24dp 0x7f07008c
@@ -2752,6 +2754,7 @@ int drawable material_ic_keyboard_arrow_previous_black_24dp 0x7f0700a9
 int drawable material_ic_keyboard_arrow_right_black_24dp 0x7f0700aa
 int drawable material_ic_menu_arrow_down_black_24dp 0x7f0700ab
 int drawable material_ic_menu_arrow_up_black_24dp 0x7f0700ac
+int drawable minute 0x7f0700e5
 int drawable mtrl_bottomsheet_drag_handle 0x7f0700ad
 int drawable mtrl_checkbox_button 0x7f0700ae
 int drawable mtrl_checkbox_button_checked_unchecked 0x7f0700af
@@ -2802,6 +2805,7 @@ int drawable notification_template_icon_bg 0x7f0700db
 int drawable notification_template_icon_low_bg 0x7f0700dc
 int drawable notification_tile_bg 0x7f0700dd
 int drawable notify_panel_notification_icon_bg 0x7f0700de
+int drawable second 0x7f0700e2
 int drawable test_level_drawable 0x7f0700df
 int drawable tooltip_frame_dark 0x7f0700e0
 int drawable tooltip_frame_light 0x7f0700e1
@@ -3433,6 +3437,7 @@ int layout design_navigation_menu_item 0x7f0b002c
 int layout design_text_input_end_icon 0x7f0b002d
 int layout design_text_input_start_icon 0x7f0b002e
 int layout fragment_book_list 0x7f0b0030
+int layout fragment_clock_view 0x7f0b0070
 int layout fragment_tencent_map 0x7f0b006f
 int layout fragment_web_view 0x7f0b0031
 int layout m3_alert_dialog 0x7f0b0032

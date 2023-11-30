@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.jnu.student.Fragment.ClockViewFragment;
 import com.jnu.student.Fragment.TencentMapFragment;
 import com.jnu.student.Fragment.BookListFragment;
 import com.jnu.student.Fragment.WebViewFragment;
@@ -20,7 +21,7 @@ import com.jnu.student.data.Book;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private final String[] tabHeaderStrings = {"图书", "地图", "新闻"};
+    private final String[] tabHeaderStrings = {"图书", "地图", "新闻","时钟"};
     //BooksAdapter booksAdapter;
     ArrayList<Book> books;
     @Override
@@ -204,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static class FragmentAdapter extends FragmentStateAdapter {
-        private static final int NUM_TABS = 3;
+        private static final int NUM_TABS = 4;
 
         public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
             super(fragmentManager, lifecycle);
@@ -221,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
                     return new TencentMapFragment();
                 case 2:
                     return new WebViewFragment();
+                case 3:
+                    return new ClockViewFragment();
                 default:
                     return null;
             }

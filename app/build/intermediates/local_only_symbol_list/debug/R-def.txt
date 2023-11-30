@@ -10,8 +10,12 @@ color white
 drawable book_1
 drawable book_2
 drawable book_no_name
+drawable clock
+drawable hour
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable minute
+drawable second
 id baidu_web_view
 id button_item_details_ok
 id edittext_book_name
@@ -26,6 +30,7 @@ layout activity_book_details
 layout activity_main
 layout book_item_row
 layout fragment_book_list
+layout fragment_clock_view
 layout fragment_tencent_map
 layout fragment_web_view
 mipmap ic_launcher

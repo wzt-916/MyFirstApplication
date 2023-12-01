@@ -31,6 +31,7 @@ layout activity_main
 layout book_item_row
 layout fragment_book_list
 layout fragment_clock_view
+layout fragment_game_view
 layout fragment_tencent_map
 layout fragment_web_view
 mipmap ic_launcher

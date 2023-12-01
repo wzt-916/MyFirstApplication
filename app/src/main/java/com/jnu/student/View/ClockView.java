@@ -81,15 +81,6 @@ public class ClockView extends View {
         int minute = calendar.get(Calendar.MINUTE);
         int second = calendar.get(Calendar.SECOND);
 
-        // 缩放时针 Bitmap
-        Bitmap scaledHourDialBitmap = Bitmap.createScaledBitmap(hourDialBitmap, hourDialBitmap.getWidth() * 1, hourDialBitmap.getHeight() * 1, false);
-
-        // 缩放分针 Bitmap
-        Bitmap scaledMinuteDialBitmap = Bitmap.createScaledBitmap(minuteDialBitmap, minuteDialBitmap.getWidth() * 1, minuteDialBitmap.getHeight()* 1, false);
-
-        // 缩放秒针 Bitmap
-        Bitmap scaledSecondDialBitmap = Bitmap.createScaledBitmap(secondDialBitmap, secondDialBitmap.getWidth() * 1, secondDialBitmap.getHeight()* 1, false);
-
         // 计算指针的角度
         float hourAngle = (hour % 12 + minute / 60.0f) * 360 / 12;
         float minuteAngle = (minute + second / 60.0f) * 360 / 60;
@@ -97,21 +88,21 @@ public class ClockView extends View {
 
         // 旋转并绘制时针
         Matrix hourMatrix = new Matrix();
-        hourMatrix.setRotate(hourAngle, scaledHourDialBitmap.getWidth() / 2, scaledHourDialBitmap.getHeight() / 2);
-        hourMatrix.postTranslate(centerX - scaledHourDialBitmap.getWidth() / 2, centerY - scaledHourDialBitmap.getHeight() / 2);
-        canvas.drawBitmap(scaledHourDialBitmap, hourMatrix, null);
+        hourMatrix.setRotate(hourAngle, hourDialBitmap.getWidth() / 2, hourDialBitmap.getHeight() / 2);
+        hourMatrix.postTranslate(centerX - hourDialBitmap.getWidth() / 2, centerY - hourDialBitmap.getHeight() / 2);
+        canvas.drawBitmap(hourDialBitmap, hourMatrix, null);
 
         // 旋转并绘制分针
         Matrix minuteMatrix = new Matrix();
-        minuteMatrix.setRotate(minuteAngle, scaledMinuteDialBitmap.getWidth() / 2, scaledMinuteDialBitmap.getHeight() / 2);
-        minuteMatrix.postTranslate(centerX - scaledMinuteDialBitmap.getWidth() / 2, centerY - scaledMinuteDialBitmap.getHeight() / 2);
-        canvas.drawBitmap(scaledMinuteDialBitmap, minuteMatrix, null);
+        minuteMatrix.setRotate(minuteAngle, minuteDialBitmap.getWidth() / 2, minuteDialBitmap.getHeight() / 2);
+        minuteMatrix.postTranslate(centerX - minuteDialBitmap.getWidth() / 2, centerY - minuteDialBitmap.getHeight() / 2);
+        canvas.drawBitmap(minuteDialBitmap, minuteMatrix, null);
 
         // 旋转并绘制秒针
         Matrix secondMatrix = new Matrix();
-        secondMatrix.setRotate(secondAngle, scaledSecondDialBitmap.getWidth() / 2, scaledSecondDialBitmap.getHeight() / 2);
-        secondMatrix.postTranslate(centerX - scaledSecondDialBitmap.getWidth() / 2, centerY - scaledSecondDialBitmap.getHeight() / 2);
-        canvas.drawBitmap(scaledSecondDialBitmap, secondMatrix, null);
+        secondMatrix.setRotate(secondAngle, secondDialBitmap.getWidth() / 2, secondDialBitmap.getHeight() / 2);
+        secondMatrix.postTranslate(centerX - secondDialBitmap.getWidth() / 2, centerY - secondDialBitmap.getHeight() / 2);
+        canvas.drawBitmap(secondDialBitmap, secondMatrix, null);
 
         // 每秒钟刷新界面
         postInvalidateDelayed(1000);

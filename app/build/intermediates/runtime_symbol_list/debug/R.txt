@@ -3438,6 +3438,7 @@ int layout design_text_input_end_icon 0x7f0b002d
 int layout design_text_input_start_icon 0x7f0b002e
 int layout fragment_book_list 0x7f0b0030
 int layout fragment_clock_view 0x7f0b0070
+int layout fragment_game_view 0x7f0b0071
 int layout fragment_tencent_map 0x7f0b006f
 int layout fragment_web_view 0x7f0b0031
 int layout m3_alert_dialog 0x7f0b0032

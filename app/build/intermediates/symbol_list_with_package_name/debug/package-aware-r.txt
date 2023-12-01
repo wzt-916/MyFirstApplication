@@ -3439,6 +3439,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_book_list
 layout fragment_clock_view
+layout fragment_game_view
 layout fragment_tencent_map
 layout fragment_web_view
 layout m3_alert_dialog

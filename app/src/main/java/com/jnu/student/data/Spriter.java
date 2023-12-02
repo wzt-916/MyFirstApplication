@@ -9,21 +9,48 @@ import android.graphics.drawable.BitmapDrawable; // 导入 BitmapDrawable 类
 
 import com.jnu.student.R; // 导入 R 类（假设这是资源类）
 
-public class Spriter { // 创建 Spriter 类
+import java.util.Random;
 
+public class Spriter { // 创建 Spriter 类
+    public static int  score = 0;
     float x, y; // 声明坐标变量
     int drawableResourceId; // 声明绘制资源 ID 变量
+    int maxHeight;
+    int maxWidth;
     float direction; // 声明方向变量
     Context context; // 声明上下文对象
     boolean isTouched;
     Bitmap bitmap ;
 
-    public Spriter(Context context) { // Spriter 类的构造函数，接收 Context 类型的参数
+    public Spriter(Context context,int i) { // Spriter 类的构造函数，接收 Context 类型的参数
         this.context = context; // 初始化上下文对象
-        bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.book_no_name)).getBitmap(); // 获取位图资源
+        if(i == 1)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha1)).getBitmap();
+        }
+        if(i == 2)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha2)).getBitmap();
+        }
+        if(i == 3)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha3)).getBitmap();
+        }
+        if(i == 4)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha4)).getBitmap();
+        }
+        if(i == 5)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha5)).getBitmap();
+        }
+        // // 获取位图资源
+        score = 0;
     }
 
     public void move(float maxHeight, float maxWidth) { // 移动方法，接收最大高度和宽度作为参数
+        this.maxHeight = (int)maxHeight;
+        this.maxWidth = (int)maxWidth;
         if (Math.random() < 0.05) { // 如果随机数小于 0.05
             setDirection((float) (Math.random() * 2 * Math.PI)); // 设置新的方向
         }
@@ -31,10 +58,10 @@ public class Spriter { // 创建 Spriter 类
         y = (float) (y + 30 * Math.sin(direction)); // 更新 y 坐标
 
         // 边界处理
-        if (x < 0) x += maxWidth;
-        if (x > maxWidth) x -= maxWidth;
-        if (y < 0) y += maxHeight;
-        if (y > maxHeight) y -= maxHeight;
+        //if (x < 0) x += maxWidth;
+        //if (x > maxWidth) x -= maxWidth;
+        //if (y < 0) y += maxHeight;
+        //if (y > maxHeight) y -= maxHeight;
         if (x < 0 || x > maxWidth - bitmap.getWidth()) {
             x = Math.min(Math.max(x, 0), maxWidth - bitmap.getWidth());
             direction = (float) (Math.PI - direction); // 反向
@@ -61,12 +88,29 @@ public class Spriter { // 创建 Spriter 类
         Rect mSrcRect, mDestRect;
 
         Paint mBitPaint = new Paint(Paint.ANTI_ALIAS_FLAG); // 创建画笔对象
-
+        Random random = new Random();
+        int h = random.nextInt(1);
+        Bitmap bit = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha1)).getBitmap();
+        /*if(h == 0)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha1)).getBitmap(); // 获取位图资源
+        }
+        else if(h == 1)
+        {
+            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha2)).getBitmap(); // 获取位图资源
+        }*/
         mBitPaint.setFilterBitmap(true); // 设置位图过滤
         mBitPaint.setDither(true); // 设置抖动
         //canvas.drawBitmap(bitmap, getX(), getY(), mBitPaint); // 在画布上绘制位图
         if (!isTouched) { // 如果没有被触摸
             canvas.drawBitmap(bitmap, getX(), getY(), mBitPaint); // 在画布上绘制位图
+        }
+        else
+        {
+            score += 1;
+            x = random.nextInt(maxWidth); // 生成0到10之间的随机整数
+            y = random.nextInt(maxHeight);
+            isTouched = false;
         }
     }
 

@@ -3,24 +3,31 @@ package com.jnu.student.View; // 声明包名
 import android.content.Context; // 导入 Android 内容包
 import android.graphics.Canvas; // 导入用于绘制的 Canvas 类
 import android.graphics.Color; // 导入颜色类
+import android.os.CountDownTimer;
 import android.util.AttributeSet; // 导入属性集类
 import android.view.MotionEvent;
 import android.view.SurfaceHolder; // 导入 SurfaceHolder 类
 import android.view.SurfaceView; // 导入 SurfaceView 类
+import android.widget.TextView;
 
 import androidx.annotation.NonNull; // 导入注解
 
+import com.jnu.student.R;
 import com.jnu.student.data.Spriter; // 导入 Spriter 类（假设此类已存在）
 
 import java.util.ArrayList; // 导入 ArrayList 类
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback { // 创建 GameView 类并继承自 SurfaceView 类，并实现 SurfaceHolder.Callback 接口
 
+    public static int booksCollected = 10; // 记录学到的书本数
     public GameView(Context context) { // GameView 类的构造函数，接收 Context 类型的参数
         super(context); // 调用父类构造函数
         initView(); // 初始化视图
     }
-
+    public int getscore()
+    {
+        return booksCollected;
+    }
     public GameView(Context context, AttributeSet attrs) { // GameView 类的构造函数，接收 Context 和 AttributeSet 类型的参数
         super(context, attrs); // 调用父类构造函数
         initView(); // 初始化视图
@@ -50,7 +57,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback { //
     public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) { // Surface 创建时调用的方法
         // 创建 Spriter 对象并添加到绘制列表中
         for (int i = 0; i < 5; ++i) { // 循环创建 5 个 Spriter 对象
-            Spriter spriter = new Spriter(this.getContext()); // 创建 Spriter 对象
+            Spriter spriter = new Spriter(this.getContext(),i+1); // 创建 Spriter 对象
             spriter.setX(i * 50); // 设置 X 坐标
             spriter.setY(i * 50); // 设置 Y 坐标
             spriter.setDirection((float) (Math.random() * 2 * Math.PI)); // 设置方向
@@ -60,8 +67,8 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback { //
         // 初始化并启动绘制线程
         drawThread = new DrawThread(); // 创建 DrawThread 线程对象
         drawThread.start(); // 启动线程
+        // 初始化并启动计时器
     }
-
     @Override
     public void surfaceChanged(@NonNull SurfaceHolder surfaceHolder, int i, int i1, int i2) {
         // 处理 Surface 变化（在此示例中未实现）
@@ -104,6 +111,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback { //
                     // 在画布上绘制 Spriter 对象
                     for (Spriter spriter : spriterArrayList) {
                         spriter.draw(canvas); // 绘制 Spriter 对象
+                        booksCollected = spriter.score;
                     }
                 } catch (Exception e) {
                     // 异常处理
@@ -112,7 +120,7 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback { //
                 }
 
                 try {
-                    sleep(20);
+                    sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

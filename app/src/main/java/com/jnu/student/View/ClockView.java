@@ -49,15 +49,18 @@ public class ClockView extends View {
         minuteDialBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.minute);
     }
 
-    @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-        viewWidth = w;
-        viewHeight = h;
-        centerX = viewWidth / 2;
-        centerY = viewHeight / 2;
-        radius = Math.min(viewWidth, viewHeight) / 2 - 20;
+        super.onSizeChanged(w, h, oldw, oldh); // 调用父类的onSizeChanged方法
+
+        viewWidth = w; // 将传入的新宽度赋给viewWidth变量
+        viewHeight = h; // 将传入的新高度赋给viewHeight变量
+
+        centerX = viewWidth / 2; // 计算中心点的x坐标为viewWidth的一半
+        centerY = viewHeight / 2; // 计算中心点的y坐标为viewHeight的一半
+
+        radius = Math.min(viewWidth, viewHeight) / 2 - 20; // 计算半径为宽度和高度中较小值的一半，并减去20作为圆的半径
     }
+
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -75,7 +78,7 @@ public class ClockView extends View {
         // 绘制表盘图片
         canvas.drawBitmap(scaledClockDialBitmap, centerX - scaledWidth / 2, centerY - scaledHeight / 2, null);
 
-// 获取当前时间
+        // 获取当前时间
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR);
         int minute = calendar.get(Calendar.MINUTE);

@@ -47,8 +47,8 @@ public class GameViewFragment extends Fragment {
         Button startTimerButton = view.findViewById(R.id.startGameButton);
         TextView textView = view.findViewById(R.id.gameTextView);
         int score = new GameView(this.getContext()).getscore();
-        //textView.setText(score + "");
-        textView.setText("找小丑");
+        textView.setText(35 + "");
+        //textView.setText("找小丑");
         // 设置按钮点击事件
         startTimerButton.setOnClickListener(new View.OnClickListener() {
             @Override

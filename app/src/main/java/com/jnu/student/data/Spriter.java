@@ -24,7 +24,8 @@ public class Spriter { // 创建 Spriter 类
 
     public Spriter(Context context,int i) { // Spriter 类的构造函数，接收 Context 类型的参数
         this.context = context; // 初始化上下文对象
-        if(i == 1)
+        bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.book_no_name)).getBitmap();
+        /*if(i == 1)
         {
             bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha1)).getBitmap();
         }
@@ -43,7 +44,7 @@ public class Spriter { // 创建 Spriter 类
         if(i == 5)
         {
             bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha5)).getBitmap();
-        }
+        }*/
         // // 获取位图资源
         score = 0;
     }
@@ -58,10 +59,6 @@ public class Spriter { // 创建 Spriter 类
         y = (float) (y + 30 * Math.sin(direction)); // 更新 y 坐标
 
         // 边界处理
-        //if (x < 0) x += maxWidth;
-        //if (x > maxWidth) x -= maxWidth;
-        //if (y < 0) y += maxHeight;
-        //if (y > maxHeight) y -= maxHeight;
         if (x < 0 || x > maxWidth - bitmap.getWidth()) {
             x = Math.min(Math.max(x, 0), maxWidth - bitmap.getWidth());
             direction = (float) (Math.PI - direction); // 反向
@@ -91,14 +88,6 @@ public class Spriter { // 创建 Spriter 类
         Random random = new Random();
         int h = random.nextInt(1);
         Bitmap bit = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha1)).getBitmap();
-        /*if(h == 0)
-        {
-            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha1)).getBitmap(); // 获取位图资源
-        }
-        else if(h == 1)
-        {
-            bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.haha2)).getBitmap(); // 获取位图资源
-        }*/
         mBitPaint.setFilterBitmap(true); // 设置位图过滤
         mBitPaint.setDither(true); // 设置抖动
         //canvas.drawBitmap(bitmap, getX(), getY(), mBitPaint); // 在画布上绘制位图

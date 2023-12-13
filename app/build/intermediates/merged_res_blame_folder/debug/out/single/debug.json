@@ -72,6 +72,10 @@
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\haha3.png"
     },
     {
+        "merged": "com.jnu.student.app-merged_res-28:/layout_book_item_row.xml.flat",
+        "source": "com.jnu.student.app-main-30:/layout/book_item_row.xml"
+    },
+    {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_book_2.jpg.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\book_2.jpg"
     },
@@ -90,10 +94,6 @@
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\drawable\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.jnu.student.app-merged_res-28:/drawable_haha3.png.flat",
-        "source": "com.jnu.student.app-main-30:/drawable/haha3.png"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -120,12 +120,12 @@
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\layout_fragment_web_view.xml.flat",
-        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\fragment_web_view.xml"
-    },
-    {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\layout_book_item_row.xml.flat",
         "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\book_item_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\layout_fragment_web_view.xml.flat",
+        "source": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-main-30:\\layout\\fragment_web_view.xml"
     },
     {
         "merged": "C:\\Users\\86178\\.gradle\\daemon\\8.0\\com.jnu.student.app-merged_res-28:\\drawable_hour.png.flat",

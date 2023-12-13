@@ -19,6 +19,8 @@ import java.util.ArrayList; // 导入 ArrayList 类
 
 public class GameView extends SurfaceView implements SurfaceHolder.Callback { // 创建 GameView 类并继承自 SurfaceView 类，并实现 SurfaceHolder.Callback 接口
 
+    private SurfaceHolder surfaceHolder; // 声明 SurfaceHolder 对象
+    private DrawThread drawThread = null; // 声明 DrawThread 线程对象
     public static int booksCollected = 10; // 记录学到的书本数
     public GameView(Context context) { // GameView 类的构造函数，接收 Context 类型的参数
         super(context); // 调用父类构造函数
@@ -48,8 +50,6 @@ public class GameView extends SurfaceView implements SurfaceHolder.Callback { //
         surfaceHolder.addCallback(this); // 添加回调接口
     }
 
-    private SurfaceHolder surfaceHolder; // 声明 SurfaceHolder 对象
-    private DrawThread drawThread = null; // 声明 DrawThread 线程对象
 
     private ArrayList<Spriter> spriterArrayList = new ArrayList<>(); // 创建 Spriter 对象的 ArrayList 集合
 
